@@ -1,0 +1,265 @@
+
+        <!-- MATERIALIZE CORE CSS -->
+        <link href="../css/materialize.min.css" rel="stylesheet">
+        
+
+        <!-- ADDITIONAL CSS -->
+        <link rel="stylesheet" href="../css/animate.css">
+        
+
+        <!-- FONTS -->
+        <link href="../css/css" rel="stylesheet" type="text/css">
+        
+
+        <!--FONTAWESOME CSS-->
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+        
+
+        <!-- CUSTOM STYLE -->
+        <link href="../css/style.css" rel="stylesheet">
+        
+
+        <!-- RESPONSIVE CSS-->
+        <link href="../css/responsive.css" rel="stylesheet">
+
+        <!-- Start Container-->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+            <!-- =========================================
+                           SIDEBAR   
+            ==========================================-->
+                <!-- Start Sidebar -->
+                <aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+                    <!--  Sidebar row -->
+                    <div class="row">                      
+                        <!--  top section   -->
+                        <div class="heading">                            
+                            <!-- ====================
+                                      IMAGE   
+                            ==========================-->
+                            <div class="feature-img">
+                                <a href="http://demo.deviserweb.com/cv/index.html"><img src="../images/profile-img-susmita.jpg" class="responsive-img" alt=""></a> 
+                            </div>                            
+                                                      
+                            <!-- ========================================
+                                       NAME AND TAGLINE
+                            ==========================================-->
+                            <div class="title col s12 m12 l9 right  wow fadeIn animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">   
+                                <h2>Susmita Horrow</h2> <!-- title name -->
+                                <span>iOS Developer</span>  <!-- tagline -->
+                            </div>                         
+                        </div>
+                         <!-- sidebar info -->
+                        <div class="col l12 m12 s12 sort-info sidebar-item">
+                            <div class="row">                               
+                                <div class="col m12 s12 l3 icon"> <!-- icon -->
+                                     <center> <img src="../images/profile_icon.png" height = 22px width = 20px alt=""></center>
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;"> <!-- text -->
+                                    <div class="section-item-details">
+                                        <p>{{page.bio}}</p>
+                                    </div>             
+                                </div>
+                            </div>         
+                        </div>
+                        <!-- MOBILE NUMBER -->
+                        <div class="col l12 m12 s12  mobile sidebar-item">
+                            <div class="row">                                
+                                <div class="col m12 s12 l3 icon">
+                                <center> <img src="../images/phone_icon.png" height = 20px width = 20px alt=""></center>
+
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <div class="section-item-details">
+                                        <div class="personal">
+                                            <h4><a href="tel:"+ {{page.mobile}} >{{page.mobile}}</a></h4>
+                                            <span>mobile</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>             
+                        </div>
+                        <!--  EMAIL -->
+                        <div class="col l12 m12 s12  email sidebar-item ">
+                            <div class="row">                                
+                                <div class="col m12 s12 l3 icon">
+                                    <center> <img src="../images/mail_icon.png" height = 16px width = 20px alt=""></center>
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a3 animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                                    <div class="section-item-details">
+                                        <div class="personal">                                    
+                                            <h4><a href="mailto:"+ {{page.email}}>{{page.email}}</a></h4>
+                                            <span>personal</span> 
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>          
+                        </div>
+                        <!-- ADDRESS  -->
+                        <div class="col l12 m12 s12  address sidebar-item ">
+                            <div class="row">                                
+                                <div class="col m12 s12 l3 icon">
+                                    <center> <img src="../images/location_icon.png" height = 25px width = 20px alt=""></center>
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a4 animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                                    <div class="section-item-details">
+                                        <div class="address-details"> <!-- address  -->
+                                        	<h4><span> {{page.street}} </span><br>
+											{{page.city}} , {{page.state}}
+                                        	</h4>
+                                        </div>                         
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                        <!-- SKILLS -->
+                        <div class="col l12 m12 s12  skills sidebar-item">
+                            <div class="row">
+                                <div class="col m12 l3 s12 icon">
+                                   <center> <img src="../images/calendar_icon.png" height = 25px width = 20px alt=""></center>                               
+                                   </div>
+                                <div class="col m12 l9 s12 skill-line a5 wow fadeIn animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+                                    <h3>Professional Skills </h3>
+                                        {% for skill in page.skills%}
+                                         <span>{{skill.name}}</span>                                    
+                                    	 <div class="progress">
+                                        	<div class="determinate" style= "width:{{skill.rating}}";><i class="fa fa-circle"></i> </div>
+                                    	 </div>
+                                         {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>   <!-- end row -->
+                </aside><!-- end sidebar -->
+
+                <section class="col s12 m12 l8 section">
+                     <div class="row">
+                    <!-- =========================================
+                		Summary
+                     ==========================================-->  
+
+                        <div class="section-wrapper z-depth-1">                            
+                            <div class="section-icon col s12 m12 l2">
+                                <center> <img src="../images/skills_icon.png" height = 35px width = 35px alt=""></center>
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Summary</h2>
+								<div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                 {% for strength in page.strengths%}
+                                 <li>{{strength.info}}</li>
+                                 {% endfor %}
+                            </div>      
+
+                            </div>      
+                           </div>      
+                <!-- =========================================
+                   Work experiences
+                ==========================================-->
+                
+                
+                        <div class="section-wrapper z-depth-1">                            
+                            <div class="section-icon col s12 m12 l2">
+                            <center> <img src="../images/work_icon.png" height = 40px width = 40px alt=""></center>
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Work Experience</h2>
+
+                                 {% for company in page.companies%}
+
+                                <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <h3>{{company.name}}
+                                    <br>{{company.position}}</br></h3>
+                                    <span>{{company.start}} - {{company.end}} </span>
+                                    <p> </p>
+                                </div>
+                                 {% endfor %}
+
+                            </div>                            
+                        </div>
+                       <!--   ========================================
+                         Education 
+                        ==========================================
+                        -->
+
+                        <div class="section-wrapper z-depth-1">
+                            <div class="section-icon col s12 m12 l2">
+                                <center> <img src="../images/education_icon.png" height = 50px width = 50px alt=""></center> </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Education </h2>
+                                
+                                {% for institute in page.institutes%}
+
+                                <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <h3>{{institute.degree}} 
+                                    <br>{{institute.name}}</br></h3>
+                                    <span>{{institute.start}} - {{institute.end}} </span>
+                                    <p> </p>
+	                            </div>
+                                 {% endfor %}
+
+                            </div>
+                        </div>
+                       <!--   ========================================
+                         Publications
+                        ==========================================
+                        -->
+                        <div class="section-wrapper z-depth-1">
+                            <div class="section-icon col s12 m12 l2">
+                                <center> <img src="../images/paper_icon.png" height = 40px width = 30px alt=""></center> </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Publications </h2>
+                                
+                                {% for publication in page.publications%}
+
+                                <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <h3>{{publication.title}} 
+                                    <br><span>{{publication.authors}}</span></br></h3>
+                                     <p>{{publication.conference}} </p>
+	                            </div>
+                                 {% endfor %}
+
+                            </div>
+                        </div>
+
+
+                        <!-- ========================================
+                              Intertests 
+                        ==========================================
+
+                        <div class="section-wrapper z-depth-1">                           
+                            <div class="section-icon col s12 m12 l2">
+                                <i class="fa fa-plane"></i>
+                            </div>
+                            <div class="interests col s12 m12 l10 wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;"> 
+                                <h2>Interestes </h2>
+                                <ul> 
+                                    <li><i class="fa fa-camera-retro tooltipped" data-position="top" data-delay="50" data-tooltip="Photography"></i></li>
+                                    <li><i class="fa fa-glass tooltipped" data-position="top" data-delay="50" data-tooltip="Drinking"></i></li>
+                                    <li><i class="fa fa-headphones tooltipped" data-position="top" data-delay="50" data-tooltip="Music"></i></li>
+                                    <li><i class="fa fa-comments tooltipped" data-position="top" data-delay="50" data-tooltip="Chatting"></i></li>
+                                    <li><i class="fa fa-coffee tooltipped" data-position="top" data-delay="50" data-tooltip="Coffee"></i></li>
+                                </ul> 
+                            </div>                          
+                        </div>
+                        
+                        <!-- =======================================
+                          portfolio Website
+                        ==========================================-->
+
+ <!--                        <div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">                            
+                            <div class="col s12 m12 l10 website right">
+                                <div class="row">
+                                    <div class="col s12 m12 l6">
+                                       <span><a href="http://demo.deviserweb.com/cv/index.html">www.alrayhan.com</a></span>
+                                    </div>
+                                    <div class="col col s12 m12 l6">
+                                        <span><a href="http://demo.deviserweb.com/cv/index.html">www.dribble.com/rtralrayhan</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div><!-- end row -->
+                </section><!-- end section -->
+            </div> <!-- end row -->
+        </div>  <!-- end container -->

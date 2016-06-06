@@ -297,6 +297,27 @@ body {
   margin-top: 30px;
   margin-bottom: 25px;
 }
+
+.header nav {
+  background-color: #ffffff;
+}
+
+.header nav a {
+  color: #5DA4D9;
+}
+
+.header nav ul {
+    margin: 20px auto;
+    display: table;
+}
+
+.header nav li {
+  margin: 20px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
 /* style for
 
 ***** Work Experience  *****

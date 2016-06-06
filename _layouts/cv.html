@@ -24,6 +24,17 @@
 
         <!-- Start Container-->
         <div class="container">
+            <div class="col s12 m12 l8 header">
+            	<nav>
+		    		<ul>
+		        		<li><a href="">HOME</a></li>
+		        		<li><a href="">APPS</a></li>
+		        		<li><a href="">OPEN SOURCE</a></li>
+		        		<li><a href="">BLOGS</a></li>
+
+		    		</ul>
+				</nav>
+            </div>
             <!-- row -->
             <div class="row">
             <!-- =========================================
@@ -117,7 +128,7 @@
                         <div class="col l12 m12 s12  skills sidebar-item">
                             <div class="row">
                                 <div class="col m12 l3 s12 icon">
-                                   <center> <img src="../images/calendar_icon.png" height = 25px width = 20px alt=""></center>                               
+                                   <center> <img src="../images/professional_skills_icon.png" height = 25px width = 20px alt=""></center>                               
                                    </div>
                                 <div class="col m12 l9 s12 skill-line a5 wow fadeIn animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                                     <h3>Professional Skills </h3>
@@ -138,7 +149,6 @@
                     <!-- =========================================
                 		Summary
                      ==========================================-->  
-
                         <div class="section-wrapper z-depth-1">                            
                             <div class="section-icon col s12 m12 l2">
                                 <center> <img src="../images/skills_icon.png" height = 35px width = 35px alt=""></center>
@@ -153,10 +163,9 @@
 
                             </div>      
                            </div>      
-                <!-- =========================================
-                   Work experiences
-                ==========================================-->
-                
+		                <!-- =========================================
+		                   Work experiences
+		                ==========================================-->
                 
                         <div class="section-wrapper z-depth-1">                            
                             <div class="section-icon col s12 m12 l2">
@@ -164,9 +173,7 @@
                             </div>
                             <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                                 <h2>Work Experience</h2>
-
                                  {% for company in page.companies%}
-
                                 <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
                                     <h3>{{company.name}}
                                     <br>{{company.position}}</br></h3>
@@ -200,6 +207,61 @@
 
                             </div>
                         </div>
+                        <!-- 
+                        ========================================
+                         Projects
+                        ==========================================
+                        -->
+                        <div class="section-wrapper z-depth-1">
+                            <div class="section-icon col s12 m12 l2">
+                                <center>
+                                	 <img src="../images/app_icon.png" height = 40px width = 40px alt="">
+                                </center> 
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Projects </h2>
+                                
+                                {% for project in page.projects%}
+
+                                <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <h3>{{project.name}}
+                                    <br>{{project.language}}</br></h3>
+                                    <span>{{project.start}} - {{project.end}} </span>
+
+                                     <p>{{project.description}} </p>
+                                     <p><b>Frameworks:</b> {{project.frameworks}}</p>
+
+                                     <p> </p>
+	                            </div>
+                                 {% endfor %}
+                            </div>
+                        </div>
+                        <!-- 
+                        ========================================
+                         Opensource
+                        ==========================================
+                        -->
+                        <div class="section-wrapper z-depth-1">
+                            <div class="section-icon col s12 m12 l2">
+                                <center>
+                                	 <img src="../images/sharing_icon.png" height = 40px width = 40px alt="">
+                                </center> 
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1 animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                                <h2>Open Source </h2>
+                                
+                                {% for project in page.opensource%}
+
+                                <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                    <h3>{{project.name}}
+                                    <br>{{project.language}}</br></h3>
+                                     <p>{{project.description}} </p>
+                                     <p> </p>
+	                            </div>
+                                 {% endfor %}
+                            </div>
+                        </div>
+
                        <!--   ========================================
                          Publications
                         ==========================================
@@ -213,15 +275,16 @@
                                 {% for publication in page.publications%}
 
                                 <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
-                                    <h3>{{publication.title}} 
-                                    <br><span>{{publication.authors}}</span></br></h3>
-                                     <p>{{publication.conference}} </p>
+                                    <h3>{{publication.title}}
+                                    <p>{{publication.authors}}</p></h3>
+                                     <p style="color: #5da4d9">{{publication.conference}} </p>
+                                      <p> </p>
+
 	                            </div>
                                  {% endfor %}
 
                             </div>
                         </div>
-
 
                         <!-- ========================================
                               Intertests 

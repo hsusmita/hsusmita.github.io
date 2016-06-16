@@ -168,7 +168,7 @@
                     </div>   <!-- end row -->
                 </aside><!-- end sidebar -->
 
-                <section class="col s12 m12 l8 section" >
+                <section class="col s12 m12 l8 section" id = "mainContent">
                      <div class="row" id = "home">
                     <!-- =========================================
                 		Summary
@@ -335,11 +335,16 @@
                             <li class="col m5 s12 mix category-2 z-depth-1" style="display: inline-block; margin: 0px 20px 30px 20px;">
                             <center> <a href= {{project.link}} target="_blank"><img src= {{project.imageSource }} height = 200px width = 200px alt="">
                            </a> </center>
-                            <p><center>{{project.name}}</center></p>
+                            <p><center>{{project.name}}</center></p></li>                        
                         {% endfor %}
+                    </div>
+                    <div class="row" id = "openSource">
+                        opensource 
+                    </div>
+                     <div class="row" id = "blog">
+                        blog 
+                    </div>
 
-                        </li>                        
-                        </div>
                 </section><!-- end section -->
 
             </div> <!-- end row -->

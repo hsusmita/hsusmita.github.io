@@ -13,12 +13,10 @@
 
         <!--FONTAWESOME CSS-->
         <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
-        
 
         <!-- CUSTOM STYLE -->
         <link href="../css/style.css" rel="stylesheet">
         
-
         <!-- RESPONSIVE CSS-->
         <link href="../css/responsive.css" rel="stylesheet">
        <script src="http://code.jquery.com/jquery-latest.min.js"
@@ -34,7 +32,7 @@
 		        		<li>APPS</li>
 		        		<li>OPEN SOURCE</li>
 		        		<li>BLOGS</li>
-
+                        <li>PUBLICATIONS</li>
 		    		</ul>
 				</nav>
             </div>
@@ -339,10 +337,22 @@
                         {% endfor %}
                     </div>
                     <div class="row" id = "openSource">
-                        opensource 
+                         <a href= "../pdf/IDS based Defense for Cloud Based Mobile Infrastructure as a Service.pdf" target="_blank">opensource</a>
+                       
                     </div>
                      <div class="row" id = "blog">
                         blog 
+                    </div>
+                     <div class="row" id = "publications">
+                        {% for publication in page.publications%}
+                            <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                <h3><a href= "{{publication.filePath}}" style="color: #767270" target="_parent">{{publication.title}}</a></h3>
+                                <p>{{publication.authors}}</p>
+                                <p style="color: #5da4d9">{{publication.conference}} </p>
+                                <p> </p>
+                            </div> 
+                            {% endfor %}
+                        </iframe>
                     </div>
 
                 </section><!-- end section -->

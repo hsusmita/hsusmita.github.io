@@ -337,11 +337,29 @@
                         {% endfor %}
                     </div>
                     <div class="row" id = "openSource">
-                         <a href= "../pdf/IDS based Defense for Cloud Based Mobile Infrastructure as a Service.pdf" target="_blank">opensource</a>
-                       
+                        {% for project in page.opensource%}
+                            <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                                <h3>{{project.name}}</a></h3>
+                                <p>{{project.language}}</p>
+                                <p> Github: 
+                                <a href= "{{project.link}}" style="color: #5da4d9" target="_blank"> {{project.link}}</a>
+                                </p>
+                                <p>{{project.description}}</p>
+                                <p> </p>
+                            </div>
+                        {% endfor %}
+
                     </div>
                      <div class="row" id = "blog">
-                        blog 
+                       {% for blog in page.blogs%}
+                        <div class="custom-content-wrapper wow fadeIn a2 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                        <h3><a href= "{{blog.link}}" style="color: #767270"
+                         target="_blank">{{blog.title}}</a></h3>
+                         <p>{{blog.date}}</p>
+                         <p> </p>
+
+                        </div> 
+                        {% endfor %}
                     </div>
                      <div class="row" id = "publications">
                         {% for publication in page.publications%}
@@ -352,7 +370,6 @@
                                 <p> </p>
                             </div> 
                             {% endfor %}
-                        </iframe>
                     </div>
 
                 </section><!-- end section -->
